@@ -41,8 +41,6 @@ namespace Microsoft.Maui
 
 			scopedContext.AddSpecific(platformApplication);
 
-			scopedContext.InitializeScopedServices();
-
 			return scopedContext;
 		}
 
@@ -64,6 +62,8 @@ namespace Microsoft.Maui
 #if WINDOWS
 			scopedContext.AddSpecific(new NavigationRootManager(platformWindow));
 #endif
+
+			scopedContext.InitializeScopedServices();
 
 			return scopedContext;
 		}
