@@ -263,7 +263,7 @@ namespace Microsoft.Maui.Controls
 		}
 
 		/// <inheritdoc cref="DisplayAlert(string, string, string, string, FlowDirection)"/>
-		public Task DisplayAlert(string title, string message, string cancel)
+		public Task<bool> DisplayAlert(string title, string message, string cancel)
 		{
 			return DisplayAlert(title, message, null, cancel, FlowDirection.MatchParent);
 		}
@@ -275,7 +275,7 @@ namespace Microsoft.Maui.Controls
 		}
 
 		/// <inheritdoc cref="DisplayAlert(string, string, string, string, FlowDirection)"/>
-		public Task DisplayAlert(string title, string message, string cancel, FlowDirection flowDirection)
+		public Task<bool> DisplayAlert(string title, string message, string cancel, FlowDirection flowDirection)
 		{
 			return DisplayAlert(title, message, null, cancel, flowDirection);
 		}
